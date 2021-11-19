@@ -9,17 +9,50 @@
     <form name="search" action="http://fe.it-academy.by/TestForm.php" method="post">
         <caption><h1>Заполните анкету</h1></caption>
         <tr>
-            <th>
+            <th align="left">
                 <fieldset><legend>Личные данные</legend>
                                           
                     <p><input type="text" id="Фамилия" name="login_1" required placeholder="Фамилия" pattern="[А-Я]" maxlength="25" AUTOFOCUS></p>
+                    <!--text: Только кирилица, без пробелов, длина поля 25, обязательное поле, автофокус-->
                     <p><input type="text" id="Имя" name="login_2" required placeholder="Имя" pattern="[А-Я]" maxlength="20"></p>
-                    <p><input type="text" id="Отчество" name="login_3" required placeholder="Отчество" pattern="[А-Я]" maxlength="24">/p>
-                      
-                      
-                      
-                        <p><input type="submit" value="Войти"></p>  
+                    <!--text: Только кирилица, без пробелов, длина поля 20, обязательное поле-->
+                    <p><input type="text" id="Отчество" name="login_3" required placeholder="Отчество" pattern="[А-Я]" maxlength="24"></p> 
+                     <!--text: Только кирилица, без пробелов, длина поля 24, обязательное поле-->
+                
+                <fieldset><legend>Паспортные данные</legend>
+                 <!--text: Серия - только заглавные латинские буквы с длиной 2 м максимальным количеством симповоло 2, количество букв не менее 2, обязательное поле-->
+                                    <input type="text" id="series_1" name="series_1" required placeholder="AA" pattern="[A-Z]" minlength="2" maxlength="2" size="2">
+                  <!--text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле-->
+                  <input type="text" id="series_2" name="series_2" required placeholder="1234567" pattern="[0-9]" maxlength="7" minlength="7" size="7">
                 </fieldset>
+
+
+                <fieldset><legend>Дата рождения</legend>
+                   <!--text:Год рождения 4-е цифры-->
+                    <input type="text" id="year" name="year" required placeholder="2000" pattern="[0-9]{1900,2021}" minlength="4" maxlength="4" size="4">
+                    <!--select: Месяц рождения-->
+                    <select name="list" id="list">
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select>
+                    <!--number: Диапазон от 1 до 31 с шагом 1-->
+                    <p><input type="number" id="number" name="number" pattern="[0-9]{1,31}" step="1" min="1" max="31" size="2"></p>
+                </fieldset><br>
+                <select name="list" id="list" required placeholder="РБ">
+                    <option value="1">РБ</option>
+                    <option value="2">РФ</option>
+                </select>
+            </fieldset>
             </th>
         </tr>
       
@@ -28,3 +61,7 @@
          
     </body>
     </html>
+
+    
+    
+    
