@@ -1,70 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
-  <table width=100%>
-    <form name="search" action="http://fe.it-academy.by/TestForm.php" method="post">
-        <caption><h1>Заполните анкету</h1></caption>
-        <tr>
-            <th align="left">
-                <fieldset><legend>Личные данные</legend>
-                                          
-                    <p><input type="text" id="Фамилия" name="login_1" required placeholder="Фамилия" pattern="[А-Я]" maxlength="25" AUTOFOCUS></p>
-                    <!--text: Только кирилица, без пробелов, длина поля 25, обязательное поле, автофокус-->
-                    <p><input type="text" id="Имя" name="login_2" required placeholder="Имя" pattern="[А-Я]" maxlength="20"></p>
-                    <!--text: Только кирилица, без пробелов, длина поля 20, обязательное поле-->
-                    <p><input type="text" id="Отчество" name="login_3" required placeholder="Отчество" pattern="[А-Я]" maxlength="24"></p> 
-                     <!--text: Только кирилица, без пробелов, длина поля 24, обязательное поле-->
-                
-                <fieldset><legend>Паспортные данные</legend>
-                 <!--text: Серия - только заглавные латинские буквы с длиной 2 м максимальным количеством симповоло 2, количество букв не менее 2, обязательное поле-->
-                                    <input type="text" id="series_1" name="series_1" required placeholder="AA" pattern="[A-Z]" minlength="2" maxlength="2" size="2">
-                  <!--text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле-->
-                  <input type="text" id="series_2" name="series_2" required placeholder="1234567" pattern="[0-9]" maxlength="7" minlength="7" size="7">
-                </fieldset>
+    <table width=100%>
+        <form name="search" action="http://fe.it-academy.by/TestForm.php" method="post">
+            <caption>
+                <h1>Заполните анкету</h1>
+            </caption>
+            <tr>
+                <th align="left">
+                    <fieldset>
+                        <legend>Личные данные</legend>
+
+                        <p><input type="text" id="Фамилия" name="login_1" required placeholder="Фамилия" pattern="[А-Я]"
+                                maxlength="25" AUTOFOCUS></p>
+                        <!--text: Только кирилица, без пробелов, длина поля 25, обязательное поле, автофокус-->
+                        <p><input type="text" id="Имя" name="login_2" required placeholder="Имя" pattern="[А-Я]"
+                                maxlength="20"></p>
+                        <!--text: Только кирилица, без пробелов, длина поля 20, обязательное поле-->
+                        <p><input type="text" id="Отчество" name="login_3" required placeholder="Отчество"
+                                pattern="[А-Я]" maxlength="24"></p>
+                        <!--text: Только кирилица, без пробелов, длина поля 24, обязательное поле-->
+
+                        <fieldset>
+                            <legend>Паспортные данные</legend>
+                            <!--text: Серия - только заглавные латинские буквы с длиной 2 м максимальным количеством симповоло 2, количество букв не менее 2, обязательное поле-->
+                            <input type="text" id="series_1" name="series_1" required placeholder="AA" pattern="[A-Z]"
+                                minlength="2" maxlength="2" size="2">
+                            <!--text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле-->
+                            <input type="text" id="series_2" name="series_2" required placeholder="1234567"
+                                pattern="[0-9]" maxlength="7" minlength="7" size="7">
+                        </fieldset>
 
 
-                <fieldset><legend>Дата рождения</legend>
-                   <!--text:Год рождения 4-е цифры-->
-                    <input type="text" id="year" name="year" required placeholder="2000" pattern="[0-9]{1900,2021}" minlength="4" maxlength="4" size="4">
-                    <!--select: Месяц рождения-->
-                    <select name="list" id="list">
-                        <option value="1">Январь</option>
-                        <option value="2">Февраль</option>
-                        <option value="3">Март</option>
-                        <option value="4">Апрель</option>
-                        <option value="5">Май</option>
-                        <option value="6">Июнь</option>
-                        <option value="7">Июль</option>
-                        <option value="8">Август</option>
-                        <option value="9">Сентябрь</option>
-                        <option value="10">Октябрь</option>
-                        <option value="11">Ноябрь</option>
-                        <option value="12">Декабрь</option>
-                    </select>
-                    <!--number: Диапазон от 1 до 31 с шагом 1-->
-                    <p><input type="number" id="number" name="number" pattern="[0-9]{1,31}" step="1" min="1" max="31" size="2"></p>
-                </fieldset><br>
-                <!--Национальность - выбор одного значения из списка, обязательное поле-->
-                <select name="list" id="list" required placeholder="РБ">
-                    <option value="1">РБ</option>
-                    <option value="2">РФ</option>
-                </select><br>
-                <p><textarea name="text_area" lang="ru">                
-                    Введите адрес</textarea></p>
-            </fieldset>
-            </th>
-        </tr>
-      
-    </form>
-      </table>
-         
-    </body>
-    </html>
+                        <fieldset>
+                            <legend>Дата рождения</legend>
+                            <!--text:Год рождения 4-е цифры-->
+                            <input type="text" id="year" name="year" required placeholder="2000"
+                                pattern="[0-9]{1900,2021}" minlength="4" maxlength="4" size="4">
+                            <!--select: Месяц рождения-->
+                            <select name="list" id="list">
+                                <option value="1">Январь</option>
+                                <option value="2">Февраль</option>
+                                <option value="3">Март</option>
+                                <option value="4">Апрель</option>
+                                <option value="5">Май</option>
+                                <option value="6">Июнь</option>
+                                <option value="7">Июль</option>
+                                <option value="8">Август</option>
+                                <option value="9">Сентябрь</option>
+                                <option value="10">Октябрь</option>
+                                <option value="11">Ноябрь</option>
+                                <option value="12">Декабрь</option>
+                            </select>
+                            <!--number: Диапазон от 1 до 31 с шагом 1-->
+                            <p><input type="number" id="number" name="number" required placeholder="Число"
+                                    pattern="[0-9]{1,31}" step="1" min="1" max="31" size="2"></p>
+                        </fieldset><br>
+                        <!--Национальность - выбор одного значения из списка, обязательное поле-->
+                        Nationality: <select name="list" id="list" required placeholder="РБ">
+                            <option value="1">РБ</option>
+                            <option value="2">РФ</option>
+                        </select><br>
+                        <p><textarea name="text_area" lang="ru">Введите адрес</textarea></p>
+                    </fieldset>
 
-    
-    
-    
+                    <fieldset>
+                        <legend>Интересы</legend>
+
+                        <fieldset>
+                            <legend>Хобби</legend>
+                            <label>
+                                <input type="checkbox" name="hobby[1]">Рыбалка</label><br>
+                            <input type="checkbox" name="hobby[2]">Астрономия</label><br>
+                            <input type="checkbox" name="hobby[3]">Дайвинг</label><br>
+                            <input type="checkbox" name="hobby[4]">Марки</label><br>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Домашние животные</legend>
+                            <select name="list" id="list">
+                                <optgroup label="Попугаи">
+                                    <option value="1">Волнистый</option>
+                                    <option value="2">Ара</option>
+                                    <option value="3">Неразлучник</option>
+                                </optgroup>
+                                <optgroup label="Рыбки">
+                                    <option value="4">Гуппи</option>
+                                    <option value="5">Петушок</option>
+                                    <option value="6">Данио</option>
+                                </optgroup>
+                                <optgroup label="Насекомые">
+                                    <option value="4">Скорпион</option>
+                                    <option value="5">Таракан</option>
+                                    <option value="6">Паук</option>
+                                </optgroup><br>
+                            </select>
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Данные для входа и восстановления пароля</legend>
+                        <!--text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле-->
+                        <p>Login: <input type="text" id="Логин" name="login" required placeholder="Логин"
+                                pattern="[A-Z]" minlength="5" size="20"></p>
+                        <!--pasword: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение-->
+                        <p>Password: <input type="password" id="Пароль" name="password" autocomplete="off" required
+                                placeholder="Пароль" minlength="10" size="20"></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Координаты</legend>
+                        <!--e-mail: проверка должна осуществляться при помощи новых атрибутов тега <input>-->
+                        <p>E-mail: <input type="email" id="email" name="user_email" required
+                                placeholder="введите адрес почты" pattern="[A-Z]" minlength="5" size="20"></p>
+                        <!--url: проверка должна осуществляться при помощи ноавых атрибутов тега <input>-->
+                        <p>Site: <input type="url" id="url" name="user_url" required placeholder="введите адрес сайта">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Цифры</legend>
+                        <!--number: Диапазон от -2.5 до 2.5 с шагом 1-->
+                        <p><input type="number" id="number" name="number" pattern="[0-2.5]{-2.5,2.5}" step="0.1"
+                                min="-2.5" max="2.5" size="2"></p>
+                        <!--range: Максимальное 10, минимальное 1-->
+                        <p><input type="range" id="range" name="range" min="1" max="10"></p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Кнопки управления</legend>
+                        <input type="submit" value="Отправить">
+                        <input type="submit" value="Сбросить"><br>
+                        <p><input type="image" src="email.jpg" alt="Отправить форму на сервер"></p>
+                    </fieldset>
+                </th>
+            </tr>
+
+        </form>
+    </table>
+
+</body>
+
+</html>
