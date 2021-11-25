@@ -1,2 +1,2 @@
-@import "print.css" print;
+@import url "print.css" print;
 @import "screen.css" screen;
