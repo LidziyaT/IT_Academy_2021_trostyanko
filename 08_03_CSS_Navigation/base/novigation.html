@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Navigation</title>
+</head>
+<style>
+     
+    div.MenuLevel1 { width: 100px }
+    div.MenuLevel1 > div { color: #000;background-color: lightgray; border: solid black 1px; border-radius: 5px; position: relative; cursor: pointer; height: 20px; }
+    div.MenuLevel2 { width: 100px; opacity: 0}
+    div.MenuLevel2 > div { color:#000; background-color: lightgray; border: solid black 1px;  border-radius: 5px; cursor: pointer;}
+    div.MenuLevel1 > div:hover div.MenuLevel2 { opacity: 1; position: absolute; left: 100%; top: 0%; z-index: 1; transition:all 1s; visibility: visible;}
+    div.MenuLevel1 > div:hover{color: lightgray; background:gray}
+    div.MenuLevel2 > div:hover{color: lightgray; background:gray}
+    @media all and (min-width:600px)
+    {
+        div.MenuLevel1 { width: 100%}
+        div.MenuLevel1 > div:hover div.MenuLevel2 { opacity:1; position: absolute; left: 0%; top: 100%; z-index: 1; transition:all 1s; visibility: visible;}
+        div.day { float:left; width: 100px;}
+        div.MenuLevel2 { width: 100px; visibility: hidden; opacity: 0}
+     
+    }
+</style>
+</head>
+<body>
+<div class='MenuLevel1'>
+<div class="day">
+    Понедельник
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+<div class="day">
+    Вторник
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+<div class="day">
+    Среда
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+<div class="day">
+    Четверг
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+<div class="day">
+    Пятница
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+<div class="day">
+    Суббота
+    <div class='MenuLevel2'>
+        <div>Завтрак</div>
+        <div>Обед</div>
+        <div>Ужин</div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
