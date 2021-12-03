@@ -1,0 +1,19 @@
+.list{
+    width: 350px;   
+}
+ul{
+    list-style-type: upper-roman;
+    font-weight: bold;
+}
+li ul{
+    list-style-type: lower-roman;
+    font-weight: normal;
+}
+.container{
+    width: 400px;
+    background-color: black;
+    color: green;
+    max-height: 75px;
+    font-family: 'Cutive Mono', monospace;
+    overflow: auto;
+}

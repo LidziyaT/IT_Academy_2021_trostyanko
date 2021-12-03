@@ -1,0 +1,23 @@
+.navigation{
+    width: 15em;
+    background-color: #ccc;
+    float: left;
+}
+img{
+    float: right;
+}
+.article{
+    background-color: #aaa;
+    margin-bottom: 0.2em;
+    overflow: hidden;
+    margin-left: 15em;
+}
+.wrap{
+    background-color: #dbdbdb;
+}
+.clear{
+    clear: both;
+}
+footer{
+    background-color:#ccc ;
+}
